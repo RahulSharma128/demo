@@ -1,0 +1,166 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  height: 80px;
+  width: 100%;
+  padding: 0 20px;
+  
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 80px;
+  width: 100%;
+  padding: 0 20px; */
+}
+
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo h4{
+  color: white;
+  font-size: 24px;
+}
+
+nav .nav__wrapper{
+  display: flex;
+}
+nav .new__nav{
+  display: none;
+}
+
+nav .nav__wrapper li{
+  margin-left: 30px;
+}
+
+nav .nav__wrapper li a{
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+nav .nav__wrapper li a:hover,
+nav .nav__wrapper li a.active{
+  background-color: #1b9bff;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media (max-width: 884px){
+
+  
+  nav .new__nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+  }
+  
+  .nav__item {
+    margin: 0 15px;
+    position: relative
+  }
+  
+  
+  nav .nav__wrapper{
+    display: none;
+  }
+
+}
+
+
+
+
+@media (max-width: 500px){
+  nav .nav__wrapper{
+    display: flex;
+  }
+
+  nav .new__nav{
+    display: none;
+  }
+  
+
+  .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 50%);
+  }
+  
+  .logo img{
+    height: 40px;
+  }
+  
+  nav .nav__wrapper{
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: #02060b;
+    transition: all 0.3s ease;
+  }
+  
+  nav .nav__wrapper li{
+    margin: 20px 0;
+  }
+  
+  nav .nav__wrapper li a{
+    font-size: 22px;
+    padding: 10px;
+  }
+  
+  .checkbtn{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  #check:checked ~ .nav__wrapper{
+    left: 0;
+  }
+  
+  #check:checked ~ .logo{
+    left: 20px;
+  }
+
+  }
