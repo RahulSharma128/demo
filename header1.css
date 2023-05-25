@@ -16,7 +16,11 @@
     justify-content: space-between; /* Added property */
     align-items: center; /* Added property */
   }
+  .logo img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+  }
   label.logo {
+    
     position: absolute;
     color: white;
     font-size: 35px;
@@ -27,6 +31,7 @@
   }
   
   nav ul{
+    margin-right: auto;
     display: flex; /* Added property */
     float: right;
     margin-right: 20px;
@@ -101,6 +106,12 @@
     }
     #check:checked ~ ul{
       left: 0;
+    }
+    @media (max-width: 384px) {
+      .logo img {
+        max-width: 110px; /* Adjust this value as needed */
+        
+      }
     }
   }
  
